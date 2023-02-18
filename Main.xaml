@@ -85,7 +85,7 @@
       </ui:InputDialog.Result>
     </ui:InputDialog>
     <Parallel sap:VirtualizedContainerService.HintSize="1414,150" sap2010:WorkflowViewState.IdRef="Parallel_1">
-      <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence DisplayName="Indeed" sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
