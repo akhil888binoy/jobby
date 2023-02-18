@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Naukri" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="486,1186" sap2010:WorkflowViewState.IdRef="Naukri_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Naukri" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="486,1179" sap2010:WorkflowViewState.IdRef="Naukri_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -76,19 +76,19 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Naukri" sap:VirtualizedContainerService.HintSize="496,1121" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Naukri" sap:VirtualizedContainerService.HintSize="496,1114" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Mynaukri" sap:VirtualizedContainerService.HintSize="434,1010" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Mynaukri" sap:VirtualizedContainerService.HintSize="434,1003" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,793" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,786" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -110,7 +110,17 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="338,164" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.naukri.com/rpa-jobs-in-india?k=rpa&amp;l=india&amp;nignbevent_src=jobsearchDeskGNB" DesignTimeRectangle="972, 210, 120, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='nI-gNb-sb__icon-wrapper' aaname='Search' check:innerText='Search' /&gt;" Guid="0ddb64ae-f485-4efa-adf1-351cc31cc037" ImageBase64="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" InformativeScreenshot="21de41ead9d041fb5ff4a3afd1679b08.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Jobs In India - 117594 Rpa Job Vacancies In India - Naukri.com' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1020, 220, 51, 20" ElementType="Text" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl aaname='Search' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Search' tag='SPAN' type='' class='' check:innerText='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAYCAYAAABeIWWlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALvSURBVFhH7ZXbS1VREMb753rtvcegxwiCeoluFFKBPUhEWFgPaRZWFCKaEolgkqWpJ9PMW3mp1MzUzPvX+jnN2fvo9hjnITl2Bj48rjUza7657X37z0h7FQVy+YoCuXzF/0PuYLH0vEtaWFJa+P2sUzpQlGm4W2gfsLhq25Lv40iTI/i2YLi+Lq2sSiNT0vi0tLZmZy29W413AzmRu3Bfml2QllaksoZIobLJyE7+kI6VReck4/w96fJD6VR5dB7H4avSxQemc+J25h023KHD76Iq6xzusvmOk3P/cds40uRwtLAoLS5L12u3KsZxs16aC4lwobLDX6XjtyKdmleWKBd0PoxbQNwPT1jSekasO3ibGJJ8j0xKJ++YnZNr7Qt6v+w38n1eKn4cvQ/S5A6VSAOfTZGg3oVHKxqjYBznKs0RgTX3SNdqpP5gRxBvP1rWqTxJmg+PP2qxgKdmTafuTztBjv95q2tYetpu79E9kE2FM/wwHsj7MfPt5LB73S81pqSZn3aGTTzWjIVC5iG1Gpy78BCOvSoER1BxR6crjDCB0d6cHSnNbMWOQfNHcPwPOaSpO9Jx31SKZHNGMomJfYBPJ9f9KbKrbjU7fPoZyCDnoFpkrXPIKoBQVR5055zTShsIG3WjtcJfb43SOqkvJIUWW46152Zy8cXgvl0nCUk65aHidNK25MhK0gAzf06Ee3feOyo1dGSiLrTW2bvSk5dGltaBIC3HbCEe1D8lV9Vs7chs+PCCzeS8dVgOzAA6VBr7K6FqbC0PoP5N5Ge7toyTIyn4Hg1z5rNeUi1Nz1mrsq1zIsd8TMyYIYtgKGw/lH3jeVtCnM8ClYEgFRv8khnUi/BNRFgGLBMWj/vJRs5j8LljHpllxO1yIgcuhcoQIM5dNi8U1xv7Fuk5Mc65JwEE5/ckKxU2KZKNXJJv3mehHL1h9zmTc5D9bB9HB3PqH+Kkeyqxk4/tsJPvv0Eiub2CArl8RYFcvmIPk5N+A6pUfqjMH9xQAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
