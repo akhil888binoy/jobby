@@ -1,7 +1,7 @@
 {
   "name": "jobby",
   "description": "job applying robot",
-  "main": "Main.xaml",
+  "main": "LinkedIn.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.17.0-preview]",
     "UiPath.Mail.Activities": "[1.18.2]",
@@ -47,8 +47,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "ead72e30-5f8f-4391-9aa8-8594fb94b745",
+      "filePath": "LinkedIn.xaml",
+      "uniqueId": "6721f4d2-7cd7-427e-8048-36341d2a7f28",
       "input": [],
       "output": []
     }
