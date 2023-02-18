@@ -104,7 +104,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" WorkflowFileName="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="350,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" WorkflowFileName="{x:Null}" DisplayName="Invoke LinkedIn" sap:VirtualizedContainerService.HintSize="350,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False">
           <ui:InvokeWorkflowFile.Arguments>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:InvokeWorkflowFile.Arguments>
