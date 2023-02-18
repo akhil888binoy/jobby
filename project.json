@@ -47,12 +47,6 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "LinkedIn.xaml",
-      "uniqueId": "6721f4d2-7cd7-427e-8048-36341d2a7f28",
-      "input": [],
-      "output": []
-    },
-    {
       "filePath": "Main.xaml",
       "uniqueId": "1e855c8c-65e4-4bc3-a43b-aad8e0d25d80",
       "input": [],
