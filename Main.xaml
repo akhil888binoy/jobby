@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="555,1739" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,2149" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="33">
+    <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -34,10 +34,13 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="88">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -81,9 +84,13 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,1674" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="622,2084" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="JobTitle" />
       <Variable x:TypeArguments="x:String" Name="Location" />
@@ -93,49 +100,81 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the job title you need to apply" Title="Job Title">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="560,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the job title you need to apply" Title="Job Title">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[JobTitle]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter the location " Title="Location">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="560,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter the location " Title="Location">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[Location]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Feed | LinkedIn" sap:VirtualizedContainerService.HintSize="434,1005" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Feed | LinkedIn" sap:VirtualizedContainerService.HintSize="560,1415" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,788" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1198" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Text="[JobTitle + &quot;[k(enter)]&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="464,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Text="[JobTitle + &quot;[k(enter)]&quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/feed/" DesignTimeRectangle="168, 133, 280, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='search-global-typeahead__input' aaname='' /&gt;" Guid="5257265d-90db-4d18-9f32-c6adfc1c40e1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARwAAAAmCAYAAAAWYiSfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM4SURBVHhe7Z1PaxNBGIf9pqV48e9BBEEQLyJ4sAitQkERhKJEo/QD9BDoUaiHHHrpJRQFe6gHBYW2jPvb5J3O7k42ppnZ0vr84CGZfWeaXvbhnclCrjhCCOkoCIcQ0lkqwjk6PnG/fh+5Hz//uEMAgDMih8glckoYLxwVEA0ApEROCaXjhSMbxRYAACyC3GLxwqG7AYAcyC0WL5zYRACAFFgQDgBkx4JwACA7FoQDANmxIBwAyI4F4QBAdixZhLM3+uaePlt1d+7ec0vLV8vXdx8+lddj8wHgcmNJLpzPX4bu+s3bpWhiDHf3ousA4PJiSSqcr98PS9lcu3HLvX3/0ctFnY3GEo66Hc2rrwWAy4slqXBev9kopSK5xOomHc2L1Wdz4LZWw45pzW3tx+blYzRYc0v93WgNAOJYkgrn0eMnpQimndWo41Fd82L1dnZdr1jbGwbX9rfdVjjuAIQDMD+WpMLRVkpCidUM605itVYKuawsb7qdWK1DEA7A/FiSCse+lZrV4dx/8DBabyfS4dQZbnqh1bdbpSh8Lfw7421abyChFbXVbTcKrvs1k+smnJ3+aW1lcOA/BwCaWJIKx85oZp3hTKvPpOxydJNHOp1SNsF1jUN59O39RBp1sfjx6bVQJDuFkLxwiv/BC6v83O7PkgAuEpakwlFno5tR31TpuZvwWyqNVRMv1l811s6FdTLB1kYdR7XTkDSmiKCyPRvLpdI5VWRVpbmliqwHgAqWpMIRkoyd5bSxsHQqXcj4fexzqp1IWJsunKZU2moIB2AWluTCEXrO5vn6Sy8evWoswpt+UemEN786nKk3fb1jocMB6BRLFuG0UZfOPz+TU0ii19gyBduosoOJnO0U1CVRjtuEMzmgnnqGg3AA5sLSuXBEXTqxOU3GEgjXVc9sTCTBHN+lVNeu9DfbO5zIGpMMwgGYH8u5CEeYdM7+1DEAXBQs5yYcAPh/sCAcAMiOBeEAQHYsCAcAsmNBOACQHQvCAYDsWLxw+KlfAMhB9Kd+9YPjsckAAIsgt1i8cI6OT+hyACApcorcYvHCUVSQjRAPACyCHCKXhLJRKsIhhJCcQTiEkI7i3F/XFajb5w84fQAAAABJRU5ErkJggg==" InformativeScreenshot="077ec8a16a0ad651e093f1ad9a6e439c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Feed | LinkedIn' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Jobs'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Jobs'" sap:VirtualizedContainerService.HintSize="464,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/search/results/all/?keywords=rpa&amp;origin=GLOBAL_SEARCH_HEADER&amp;sid=1L9" DesignTimeRectangle="200, 189, 56, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Jobs'" FullSelectorArgument="&lt;webctrl aaname='      Jobs  ' parentid='search-reusables__filters-bar' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='      Jobs  ' parentid='search-reusables__filters-bar' tag='BUTTON' type='button' class='artdeco-pill artdeco-pill--slate artdeco-pill--choice artdeco-pill--2 search-reusables__filter-pill-button&amp;#xA;     search-reusables__filter-pill-button' check:innerText='Jobs' /&gt;" Guid="b3a9552a-e2b3-48fa-9f91-8d78e9eb49f8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAkCAYAAADVeVmEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPmSURBVGhD5ZnrKzVRFMbfv9ZH5YMPisQHUiJESUkRIsktQsqdXHI5uUXupJBC5Lb0W2ZPx5zbnvOO8x7vPDU5Z/Y6s55n77XXWnv8kZAhEMFvb2/Op59DUD58C76/v5ejoyNZW1uT6elpGR4eloGBAenv7//RCx/4wie+4QAXv7AWfHV1Jevr6zI6OirLy8tyfHwsd3d38vLy4lj8PPCFT3zDAS5wgpstUgpmFiORiIyNjcn+/r68vr46I/8ecIET3OBos+JJBV9eXsrc3Jxsbm5mZJ+mC7jBEa5wToaEgs/Pz2ViYkJOTk6cO9kPuMIZ7okQVzCzxA9TzVY2IhX3GMHsA0LjN62sF3BHQ7w9HSOYzc9++O1AA1q8+CaY9E7Gy+YEZQs0oMVbsr4JpqaR5v8XoAVN0XAFE+8U8kzVWcjk5OTIwsKCcyd4oAVN0XvZFUyrRvfiFw8PD1JTUyNtbW2+uq5MCAZoQpuBK5j+lJbNL7JdMJrQZuAKpimnT/WLbBeMJrQZuII5iaRzEIgn+OPjQ3Z2dqShoUFyc3MlLy9PWlpa5OzsTMeBETw/Py+rq6tSUlKittjd3t46Vl/Ph1tRUZHaV1VVycXFhTOaGnDi9wYqmBTO8SsdeAUjdnFxUck3NTXJxsaGNgFlZWVSXl7ukjWCa2trpb29XWsmHJicxsZGeXx81KTT3d0tpaWlMjs7K9vb29LX1ycHBwf6DFtEawtcMCFUXV0tzc3N8vT05FiJHB4eSn5+vgwNDemkGMGdnZ1uZeA+tRM7Eg2i6+rqdOL4bGy4/CBGMAgqpJl9VpdQjYbXLtEe3tvb0/tLS0sqbGZmRp9HSDNZNzc3jqUd8BUT0iCopPW3gsmo3N/a2tLviL6+vpbBwUEpKCjQa3d3V8dskDBppVuWvKEKuYqKCmltbZXn52fH6quhLyws1JDFzgju7e2V9/d3teEv34uLi/WIh50ZA7SJ5IGuri7rBilhWfLTeLCfenp6lByhBsHT01MdgyTHs3hJq7KyUicEGMGsWEdHh9rxl9+ZSSAqiIiVlRVdVSaVcZ5vi4SNh5/WEsH19fXqnIzqPUpCllJDCTGiWJXocmMET01Nyfj4uBuuIyMjbrIjQhDPfWxZ3cnJSd0SNkjaWoJQHR5A6I6HIFQvAADxHqpXPCBUL/EMQvWa1oBZIjTYD9mcyOAGR7imisqkggH7gM1PxiPN23Y4mQBc4AQ3OMbbs16kFGxAeqemUcjpXmjZ6FNtm4AggC984hsOcIGTt/Qkg7VgA2aRVo3+lKackwjHr3j/4gzywge+8IlvONisqBe+Bf92hEywyCfpF14rc97IyAAAAABJRU5ErkJggg==" InformativeScreenshot="7356d9486d01783889a0e3f1a42cc9ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(2) &amp;quot;rpa&amp;quot; | Search | LinkedIn' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'City, state, or zip code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Text="[Location]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'City, state, or zip code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="464,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Text="[Location]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3467375060&amp;keywords=rpa" DesignTimeRectangle="390, 134, 214, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'India'" FullSelectorArgument="&lt;webctrl id='jobs-search-box-location-id-ember477' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='jobs-search-box-location-id-ember477' tag='INPUT' type='text' class='jobs-search-box__text-input' aaname='                        City, state, or zip code                                     ' /&gt;" Guid="383ffb4f-79f7-4c69-aa38-103afd12d5a6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANoAAAAkCAYAAADvhSSyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKWSURBVHhe7Z1Pa9RQFEf9Fp0PV7CDGxE3IvgFxKngoCguBEFwEEsFceHC3YADFsSFiy6ktBspCm7qQsFClWduJvfNS3KZvmTyMoLnBwfy/mV3uDdZJBccISR5EI2QHlIS7ez3H/fz15n7/uPUnQBAY8QdcUhcCuNFkwUEA+gGcSmUzYsmFloHAKAd4pTGi0Y1A+gWcUrjRbM2AsBqaBANICEaRANIiAbRABKiQTSAhGgaifb23Xs3vvfAXRxeypFrmbP2AkAL0Z6/eOkFqyJr1hmA/x1NlGhStSzBQqhsAHU0UaLduXvfCyXX+5+O3NHnr7V56+wyptsDt7lzbK7FcLCz5Ta29+bjw123Odhyk8P6PoB1oYkSTWUSRDCdF+HCtfBMDJ2KBvAPokE0gIRoGreO8qZRW8fwDeTqreOeG0nrN5MWcOA2csZuGp6ZjYv5+dqkJFpx3reOMta9GcNddxDeC6AHNGt9GVIXLRTi2E2G2VhFyiULxMufyYL1qmjZ/tGsuC7uvRgD9IMmSjTh5q3bpmCCrFlnzsOsaOHLDJGrEM9qM8uto3E+YNU2FaANmmjRqs9jIbJmnTmPeNHm1a1akZaLVlREbR0zEA36RhMtmvDw0eOaZE+ePjP3xrBqRZM5W7S6mFQ0WAeaRqJ9+XbiLl+56iWTa5mz9sbQRLS8ekU/o1XvJWNEg/7RNBJNePX6jRdNrq09sTQRTcZz2YpWMJufLmkdS3szQUdUNFgDmsaiCdeu38ix1gBggaaVaB8+7udYawCwQNNKNACIQ4NoAAnRIBpAQjSIBpAQjReND6gCdIv5AVU+CQ7QLeYnwfnJBUB3iEvmTy4ksiAWIhxAO8QdcSiUTFISjRCSJohGSPI49xf7Th0qbrF5SgAAAABJRU5ErkJggg==" InformativeScreenshot="ec7c087e889ea058ca4f83bdb27a60b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(2) rpa Jobs | LinkedIn' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="390, 134, 28, 32" ElementType="Text" FriendlyName="'City, state, or zip code'" FullSelectorArgument="&lt;webctrl parentid='location-typeahead-instance-ember477' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='location-typeahead-instance-ember477' tag='LABEL' type='' class='jobs-search-box__input-icon' aaname='                                 ' check:innerText='City, state, or zip code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE/SURBVFhH7ZexagJBEIZ9DN9Ogk0QmyD4AkESUBTFQhAEIaQIhBQWdoEUFmJhcYWNjYWCjRYKBs4w4T+4ZdFBZxfv9oRb+GDZmWG+3b0rNkOOR7IE/OMf7Q8+bXe/tIkJJYDmcTYOUQLYOZcQNUrAxe6BEuCCcZAKpAJGAj+jMdUaLco95AMwxxqXK0Us8P7xqRqfghhXI0EkgF1yjXVsT0IkUK03VSPMvdmc5ovV2TpXe4nvl6xMIGwC0Dhch4ge02sk3I+AftT48sMr0P+ISK8gqo9QLACeK69sY4AYV3MNI4HT+9ZBjKu5hpEAaHe6Z817/Tc2V4KxwHK9ocdCUTXHHGtcrgRjAfA1GCoBzLkcKVYC4KlUDuBiplgJTKZeABczxUrglqQCyRFw/jBx/jRz/jjFcPo8dzUcCxD9A1BLy59kQuLyAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
+            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='CurrentElement' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="464,370" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
+              <uix:NForEachUiElement.Body>
+                <ActivityAction x:TypeArguments="x:Int32">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NForEachUiElement.Body>
+              <uix:NForEachUiElement.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3485359327&amp;keywords=rpa" DesignTimeRectangle="220, 559, 32, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'2'" FullSelectorArgument="&lt;webctrl aria-label='Page 2' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Page 2' tag='BUTTON' type='button' class='' aaname='     2   ' check:innerText='2' /&gt;" Guid="29086150-f37f-4bda-80c7-f94cf48f3e71" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVFhH7dTBCYNAFIThVPtaEvvIFrHpYVsIWMHLMy5BPGQgM4cc5gdB9PLhTnLLP8sglEEog1AGoQxCGYSiQNtjyYiY15L9OV8QEaCR7T7mfTVaoVo95RIe2ZZ9jWykSAiqLyY4Nhnovae113fikoCOcfP72SNBx27iPG4yAqQZ8bXfQfvPXLCZaxzo86d4usjjk4xamUEog1AGoQxCGYQy6HuZL8jQDD7IrBEaAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(2) rpa Jobs | LinkedIn' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NForEachUiElement.NextLink>
+              <uix:NForEachUiElement.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="119, 302, 486, 3451" DesignTimeScaleFactor="1" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='main' tag='UL' /&gt;" Guid="57d4a6a2-00c4-418c-a557-382040ad7517" InformativeScreenshot="30973a39e54f971bab635a908c4801ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(2) rpa Jobs | LinkedIn' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NForEachUiElement.Target>
+              <uix:NForEachUiElement.Variables>
+                <Variable x:TypeArguments="ui:UiElement" Name="CurrentElement" />
+                <Variable x:TypeArguments="x:String" Name="CurrentElement_Label" />
+              </uix:NForEachUiElement.Variables>
+              <uix:NForEachUiElement.VariablesMetadata>
+                <scg:List x:TypeArguments="uuam:VariableMetadata" x:Key="Column0" Capacity="4">
+                  <uuam:VariableMetadata Name="CurrentElement" Type="ui:UiElement" />
+                  <uuam:VariableMetadata Name="CurrentElement_Label" Type="x:String" />
+                </scg:List>
+              </uix:NForEachUiElement.VariablesMetadata>
+            </uix:NForEachUiElement>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
