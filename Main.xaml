@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="612,2511" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="612,2717" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
@@ -37,6 +37,7 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -88,9 +89,10 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="622,2446" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="622,2652" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="JobTitle" />
       <Variable x:TypeArguments="x:String" Name="Location" />
@@ -110,13 +112,13 @@
         <OutArgument x:TypeArguments="x:String">[Location]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Feed | LinkedIn" sap:VirtualizedContainerService.HintSize="560,1777" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Feed | LinkedIn" sap:VirtualizedContainerService.HintSize="560,1983" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1560" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1766" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,13 +145,14 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='CurrentElement' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="464,732" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="464,164" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V3" />
+            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='CurrentElement' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="464,734" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
               <uix:NForEachUiElement.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,467" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,469" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -159,7 +162,7 @@
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/jobs/search/?currentJobId=3485359327&amp;keywords=rpa" DesignTimeRectangle="655, 533, 100, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl id='ember1142' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ember1142' tag='BUTTON' type='' class='jobs-apply-button artdeco-button artdeco-button--icon-right artdeco-button--3 artdeco-button--primary ember-view' aaname='             Apply ' check:innerText='Apply' /&gt;" Guid="e21fd420-3148-494c-87c0-3169860da043" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAsCAYAAACJ1f3bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUpSURBVHhe7VpRayNVFPZZ/AH6A3zpm2/+A+mjLz7vk+LT+uaCCy744oJQCgoFQQLqQwQhixVWFpZQt91a6pK2CGNrNyWhmNCEJtTstFvCcb6Ze2ZuJudOppmZJOL94IPeO3fuNOebe865584rZLHQsAItODIL9OSwR5//3KD3vvqD3vp0l16/vUWvffArvfr+xv+K+M347bABbAGbwDZZMZVAf7Vf0Cc/Pqc3P/5N/GctI8JGsBVsNg1uJFC7/5Juf38k/iOWkwnbwYY3QWqBSk/+9pew9GDL9IQNYcu0SCWQXTX5EzZNg4kCIeBJD7DMTth2EhIFsuIUz0kiGQWybm12THJ3okAIYtJElsXRlDiMCYQ00GZrsydsLqXgYwJZ1zY/Sq5uRCDsdqUbLWfHeMVhRCCUJKSbLGdHaKBjRCBbW0tHE6SxNyU00BEKhMqrdMN/jpsD//f0nOK8gQnS2GmoV8FDgVAelwbnweUdVz3lih6W5DG5MSeB3vhoi77dbFFvcO3PB8Sv7zX+UVcC6NezEFowQoGKqxrsU7mtHuLBPaoLY3JkTgL9VOv48+jga7o4+81IJP3+LNSrC6FAOGiSBmdmqUstb373uEvbl94fl326J43LizkJxHjni72R/rg4aDP0cVkILRihQEVtTu84gYuoPdqg+8fD4O/HO+IY56lDayeRS3E757T6JY97TlXf9gMqf31KtQt/CNFwSHWnSe/yfCMC1YOXglyqrPA8HlfaVEd3v0sfcl+MDL1PEsc0NguhBSMUqJhjamWg4QWtor3e90zloXFKS9o4Fsi9vKZe+5wqT7tU6wdiRkZkgYbkenGh7pxR+eCCWmrz3do7DOaLraB7R8E89d398HkcE+s7UV+cDG6bxCmC0IJRqEBLj9Vr3miqvibVfHu5VNbeaBZoVLhDethHp5dYfIM2CxRbgcqFQshbaMddHF/vnNGyf88+VRBevJdm7a6aQyCD2xt/BplV0eKAokD5u7gdWlPJiG7QVdWnv9Ghi9vU79f6N9COXFxJGzPWPxaDOElRbm7lLHBvsVUcJ4Pbb3/2uy+SLg6D23lRdHG5Jwns503Q/L9JoEDMIW2vo20SSK1KL/m4j7aQJPBKxkuxvAv35s35QJ9jnAzpGpMhXctCMUnIO80ODOFh4JJzOtDoUs93c9dU/SEYG8ag40b0Vt9thAE+cIdRDNpej1bkEse1djtwYYJAoYhefKvCbSYkB0xGPItjoh/ov7gWr2ehmGbnu1Hl+DGesYEcuHlPFMYgz/itky6Vd8/JCeysiRbFIHp5RbWDNlW8QYHYmmiiQNEzgdaBSigSKO2DJHy31RLvz0Jxo5prqeeBeqtNex4O3CpQhy7uWZOqHWVIlT7fCgN55OIqv5xT3V9dHi5dqj5yopVnECh8ZixBMRGxBiJhhZgAcYpIGMRSDzCvYqkpBo3SFINSkgWakBzMm8ZiKTCv44ZZCBQ8Y+htmMdd7iIx8bhhXgd2RQq0+qxP1ZOrMJEIKw4LysQDO2AeR95FClRS32K4nS7dSdiYLgInHnkD9qOR+RA2T/XRCGA/u5o9U392xbBf98yOkmtjGAUCijvEs2TqVQMJiQIBVqTiOEkcYKJAgHV3+TPJrelIJRCAIGazu+yEDU0JgYTUAgFIA+1qmp6wnZRKJ+FGAjGw20VJwn7oOJmwEWwVrxCkxVQC6UDlFeVxBDwcNGEJF/N9w2ITvxm/HTaALWATvSo9LTILZFEsrEALDaJ/AYdn1gsfP6aoAAAAAElFTkSuQmCC" InformativeScreenshot="6b9794b99718c328ef553b0ddcb3cc57.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(2) rpa Jobs | LinkedIn' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target DesignTimeRectangle="675, 543, 42, 20" ElementType="Text" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl parentid='ember1142' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ember1142' tag='SPAN' type='' class='artdeco-button__text' aaname='     Apply ' check:innerText='Apply' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAYCAYAAACFms+HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKWSURBVFhH7VZNayJBEN3z/pT8E4/7D3Ja2H+QQw655iTCHoSFxat7MuAhSyAMQoiIBFcvQ4IZUWQddNBBZDQyvPRX9bTtDIQwBAMWPJiuqa5+Xf2qZ758/d7AZ8SR+EfjSPyjcST+btytwG3hPqe/z0Aq8UIrEsmADa4r++9zRX7Eu6j6Ipew6Mmz3ueM3IhXAkw44X6A5po9rENc2DF5Ii/iZ+5WJOrcNHDZj+XzbSs1xr13UR7IZ27RbI7ST4p7hiM4rVD9NUZnKUKAOIbnjvCN8u0Q92SxEKFWpDwMRR8ed4cBfiifRVxNjJco8XE9ZCmYDcc4MeKIeLTeYuHPUbsP0AnlJpPkRDxGtNoyslNUe0tMXkQUJv8eZT6r4hdPMo/X7ur1qOe8VuLbIX5yq8oyHCnfCB2RJ0LVqAAR393QI65D7mQN/ZuPibh1YkqKfIOnfGxLhd7PpiiIOV3UZmzMilk+VzkYDOItlId8xu5CJeUzK6ClckdzLX+DjxOpVIyYPf+exulyUHIpTqVMrFNPiJOOsszQVxZxuckYzTofZxFXp8ia/pKPU5qTTp4Xq9DmMmE5r8wcBnEZwGwVwR2vDERYCLls4fyRsVrj/WFShfOhbiwpq0TjzXpygifUN74vpZBCXG+O9Y/D5WcUjaCIkz73bxAOahi607XGGanJIEC1PYcr1zc2k2gcLxt0ej5qLEgWwdhMKvFkTW6TnmpkA5L4lapC1p1NDaMaREvlYQRnphZQ19ypbqBEKrW/c3jiNJitIzg3bnJSGcT1mtbFQDCa8+3I0vgusjT+RhBxqykJB0tcrhGzD+G+dDkOjnjpIYQz2OgG1l9YCwdHvPJfpGa/DwHOjA+OjXcRPwR8UuINvALMfROLdTOAoQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
