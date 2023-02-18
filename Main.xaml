@@ -2,8 +2,6 @@
   <x:Members>
     <x:Property Name="errorInfo" Type="InArgument(uico:ExceptionHandlerArgs)" />
     <x:Property Name="result" Type="OutArgument(uico:ErrorAction)" />
-    <x:Property Name="Location" Type="InOutArgument(x:String)" />
-    <x:Property Name="JobTitle" Type="InOutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
