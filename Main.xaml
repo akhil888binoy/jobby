@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="555,731" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="555,724" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -79,25 +79,29 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,659" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Feed | LinkedIn" sap:VirtualizedContainerService.HintSize="434,555" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Feed | LinkedIn" sap:VirtualizedContainerService.HintSize="434,548" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,338" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,331" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Version="V3" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/feed/" DesignTimeRectangle="168, 133, 280, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='search-global-typeahead__input' aaname='' /&gt;" Guid="5257265d-90db-4d18-9f32-c6adfc1c40e1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARwAAAAmCAYAAAAWYiSfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM4SURBVHhe7Z1PaxNBGIf9pqV48e9BBEEQLyJ4sAitQkERhKJEo/QD9BDoUaiHHHrpJRQFe6gHBYW2jPvb5J3O7k42ppnZ0vr84CGZfWeaXvbhnclCrjhCCOkoCIcQ0lkqwjk6PnG/fh+5Hz//uEMAgDMih8glckoYLxwVEA0ApEROCaXjhSMbxRYAACyC3GLxwqG7AYAcyC0WL5zYRACAFFgQDgBkx4JwACA7FoQDANmxIBwAyI4F4QBAdixZhLM3+uaePlt1d+7ec0vLV8vXdx8+lddj8wHgcmNJLpzPX4bu+s3bpWhiDHf3ousA4PJiSSqcr98PS9lcu3HLvX3/0ctFnY3GEo66Hc2rrwWAy4slqXBev9kopSK5xOomHc2L1Wdz4LZWw45pzW3tx+blYzRYc0v93WgNAOJYkgrn0eMnpQimndWo41Fd82L1dnZdr1jbGwbX9rfdVjjuAIQDMD+WpMLRVkpCidUM605itVYKuawsb7qdWK1DEA7A/FiSCse+lZrV4dx/8DBabyfS4dQZbnqh1bdbpSh8Lfw7421abyChFbXVbTcKrvs1k+smnJ3+aW1lcOA/BwCaWJIKx85oZp3hTKvPpOxydJNHOp1SNsF1jUN59O39RBp1sfjx6bVQJDuFkLxwiv/BC6v83O7PkgAuEpakwlFno5tR31TpuZvwWyqNVRMv1l811s6FdTLB1kYdR7XTkDSmiKCyPRvLpdI5VWRVpbmliqwHgAqWpMIRkoyd5bSxsHQqXcj4fexzqp1IWJsunKZU2moIB2AWluTCEXrO5vn6Sy8evWoswpt+UemEN786nKk3fb1jocMB6BRLFuG0UZfOPz+TU0ii19gyBduosoOJnO0U1CVRjtuEMzmgnnqGg3AA5sLSuXBEXTqxOU3GEgjXVc9sTCTBHN+lVNeu9DfbO5zIGpMMwgGYH8u5CEeYdM7+1DEAXBQs5yYcAPh/sCAcAMiOBeEAQHYsCAcAsmNBOACQHQvCAYDsWLxw+KlfAMhB9Kd+9YPjsckAAIsgt1i8cI6OT+hyACApcorcYvHCUVSQjRAPACyCHCKXhLJRKsIhhJCcQTiEkI7i3F/XFajb5w84fQAAAABJRU5ErkJggg==" InformativeScreenshot="077ec8a16a0ad651e093f1ad9a6e439c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Feed | LinkedIn' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
