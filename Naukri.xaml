@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Naukri" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,724" sap2010:WorkflowViewState.IdRef="Naukri_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Naukri" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="486,991" sap2010:WorkflowViewState.IdRef="Naukri_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -35,7 +35,7 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -68,21 +68,27 @@
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Naukri" sap:VirtualizedContainerService.HintSize="496,659" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Naukri" sap:VirtualizedContainerService.HintSize="496,926" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Mynaukri" sap:VirtualizedContainerService.HintSize="434,548" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Mynaukri" sap:VirtualizedContainerService.HintSize="434,815" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,331" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,598" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -93,6 +99,7 @@
                 <uix:TargetAnchorable BrowserURL="https://www.naukri.com/mnjuser/homepage" DesignTimeRectangle="855, 140, 240, 40" DesignTimeScaleFactor="1" FriendlyName="'Search jobs here'" FullSelectorArgument="&lt;webctrl class='nI-gNb-sb__main' parentid='ni-gnb-header-section' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='nI-gNb-sb__main' parentid='ni-gnb-header-section' tag='DIV' type='' aaname='' check:innerText='Search jobs here' /&gt;" Guid="60cfdc34-5839-42a3-9ccd-4f6a46f1b06a" ImageBase64="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" InformativeScreenshot="b8d31fd53fd099427189ae7df7f1fe79.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home | Mynaukri' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Version="V3" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
