@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,2314" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,2511" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
@@ -90,7 +90,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="622,2249" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="622,2446" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="JobTitle" />
       <Variable x:TypeArguments="x:String" Name="Location" />
@@ -110,13 +110,13 @@
         <OutArgument x:TypeArguments="x:String">[Location]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Feed | LinkedIn" sap:VirtualizedContainerService.HintSize="560,1580" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Feed | LinkedIn" sap:VirtualizedContainerService.HintSize="560,1777" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1363" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1560" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,13 +143,13 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='CurrentElement' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="464,535" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
+            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='CurrentElement' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="464,732" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
               <uix:NForEachUiElement.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,270" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,467" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -164,6 +164,11 @@
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'I'm interested'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e0432c5-dfac-446f-895b-a366b28d890a" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://jobs.smartrecruiters.com/Ramboll3/743999865744021-automation-developer" DesignTimeRectangle="811, 203, 368, 38" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'I'm interested'" FullSelectorArgument="&lt;webctrl id='st-apply' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='st-apply' tag='A' type='' class='button button--primary button--huge js-oneclick button--block' aaname='I&amp;apos;m interested' check:innerText='I&amp;apos;m interested' /&gt;" Guid="fe474592-b141-40c2-bcde-569342692af3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXQAAAAqCAYAAACjkKBgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT8SURBVHhe7dzNSht7GMfxs/EGeg/egPtuXeoN9HB2QikUVy4KFV3UhVARjohQTuCsUiicUBAPIgz0IGSRgCKEGAgMtEhcBIIFDQbh6f+Zl2Te/mlMWxznfAc+i/xfn3Hxyzgz+ttgMBAAwONHoANAQcQC/cWb9/Lk6YrMzL0EAOSYZrVmdjTDh4GuHVmTAAD5FQ31YaBzZQ4Aj49mdyrQswYCAPKPQAeAgiDQAaAgCHQAKAgCHQAKgkAHgIIg0AGgIAh0ACgIAh1WK7UbEbkR523Q9vHSfBbp1SqpsT9Dar9JLf4tW7WuVP/J6MuDX1Cf/7O6lFJGH/6/CHRYPZpAf9uSnpnZ/JjRlwe/oD4CHVkIdFjZAt092kmNfVAEOuAh0GGVCvRtDaaBVN9F+y+lvFGXpiaWHncDcWuOLMxtyupxV3p3QXtPx63H1k9K7hdff+Ato0fvoiVby8G84EtmdERC7tkHKbdvpB/WcHsjzWOtLeg3wj0qZh1vnKm/+e9fE8+fmdvzbqf0boMxZr5X36vgXH+wPjUbPX/9+X6qDOsm0BFFoMMqGbAzi3Vx5UoOXkf7B9I3YdZzW1LZb8hJ1w+ezqXpu+1K9aguFQ08bbx2ZTWyflJyv/T6p+K42maOz3WZ13lrh1I+NmFsmjpndSnvH8qStj+vSlND9s6EZO3UtI/m9t3qMDT9Pcyh44611paU1u47fyCdttaXca4/WN/MWkM62hjUVz7+Ip1b86XhBTyBjjgCHVbJgM3u9++pz4btz09N6Jvjrivl8Cra2DjTADJrbY7akpL7Za4/ty4lb4NImGXc0lg90f26UgmvlAMLR13Tbn7L2PU/h3t0nL3YuMnmV8T5aj6aL5dRfWaMc2XO/0qcP4O2qetbl91z81F/JtuRccvmi9W7qifQEUegw2qyQNewibabK0/NmkTIze5rUNnXUtmBnlw/o65UYAZB+/XSu2ouRwVXy+GD3exznHT+jpQ/mw9mftMxV95L8XAemrq+Q6lemw8Xp/5vIxH+FySBjjgCHVbZYfe9/iDQ3WqkzfDuJdvXUsn1bPun2lOBGdQw7mj79Y09h3FHMH92uyGu3joJD70PXqvLRvTKe+r6/HH9s8PRWoHfP5nfAgh0JBDosLIF6vj+HAV6soYM9zoHq01ZKtXFaV+NHo7qmuFtkqnrswf6vHdrhkBHHIEOK1ugju/PQ6AHtyquXdmIzMuSvcfk89PWZf6d69Uj547fNnV93HLB/RDosLIF6vj+PAR6+NDRlLEff9i54N3LN+3Bq4m2PSaa/4c5V3NF3j//L/a8YGb51H8zxRrok9e31dBxpr7YQ1F/XwIdSQQ6rGxhN77/AQL9dfBqX9eVSvha4DD0RHrthnivBbavvAeO0mvJyqJlrdBE83ek1PaDuXfhyoH3UNMVVx94/qT6huPC1xuPzPrBPAIdSQQ6rKxhN7b/AQJ9bk92G9qmh2kPX41cduTAjfzhjv7RT7suL5+F875zjhPM1//TsnsSvXdurtj1j6g2NyNrTV+fmn3liHMRztcvj5ZUvPUIdMQR6ABQEAQ6ABQEgQ4ABUGgA0BBEOgAUBAEOgAUBIEOAAVBoANAQRDoAFAQBDoAFASBDgAFkQr0J09XMgcCAPJLszsV6C/evM8cDADIL83uVKCHoc6VOgDkn2Z1NMxVLNABAI8XgQ4AhTCQb64iqdGxPJ1aAAAAAElFTkSuQmCC" InformativeScreenshot="9616c59ff88e5fe2a9bc4d2f0dc69860.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ramboll Automation Developer | SmartRecruiters' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
                   </Sequence>
