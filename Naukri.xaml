@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Naukri" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,2294" sap2010:WorkflowViewState.IdRef="Naukri_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Naukri" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,2491" sap2010:WorkflowViewState.IdRef="Naukri_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
       <x:String>System.Activities</x:String>
@@ -88,7 +88,7 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Naukri" sap:VirtualizedContainerService.HintSize="622,2229" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Naukri" sap:VirtualizedContainerService.HintSize="622,2426" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="JobTitle" />
       <Variable x:TypeArguments="x:String" Name="Location" />
@@ -108,13 +108,13 @@
         <OutArgument x:TypeArguments="x:String">[Location]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Mynaukri" sap:VirtualizedContainerService.HintSize="560,1560" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Mynaukri" sap:VirtualizedContainerService.HintSize="560,1757" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1343" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1540" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,19 +147,24 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='CurrentElement' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='article' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="464,515" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V3">
+            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='CurrentElement' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='article' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="464,712" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V3">
               <uix:NForEachUiElement.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,250" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,447" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="338,137" sap2010:WorkflowViewState.IdRef="NClick_2" InUiElement="[CurrentElement]" KeyModifiers="None" MouseButton="Left" Version="V3" />
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Apply'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="951c0c0e-e658-4986-ab93-15e994c4c336" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.naukri.com/job-listings-associate-application-developer-rpa-robotic-process-automation-herman-miller-bangalore-bengaluru-2-to-4-years-130223006981?src=jobsearchDesk&amp;sid=16767905936354005&amp;xp=2&amp;px=1&amp;nignbevent_src=jobsearchDeskGNB" DesignTimeRectangle="716, 389, 102, 36" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl aaname='Apply' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Apply' tag='BUTTON' type='' class='waves-effect waves-ripple btn apply-button' check:innerText='APPLY' /&gt;" Guid="2106b492-486b-484b-a1a6-c869cade02bb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAoCAYAAAAWsW/wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALLSURBVHhe7ZvPattAEIf7fH2DHv0AfYDee8pJp0DBh/jUHBof0kMbX0QODdSH4lKKS3ApJNgWIrXjSLKiWNZ0R7ujf5bb5hBrDPODD+LxeFH2065kg56BZC8iovYkmajedx9evBnDc+tKYAC6QCeUTJRI4gc6oWSi6hqF5qGIKOZQRBRzKCKKORQRxRyKiGIORUQxhyKimEMRUcyhiCjmUNiIag0ifSCuB63q++ch5L96mawT8GdL6LzN+85m5r1i7mMYfr3JxzRj+dfzfHzLBXuOzQkML6hWqX+eFOq7g8JE1KQwyQ9wdlR530xuNAvBHgYpfSeGVO0yhLbp02MoMabHvgzBucdaAlff3NJYZVF5HeYBvKrWZn5e2zEUHqK6ATjqGCJPT77zw0wqUTu5EzhxElXFs13XtCglOutRnC4hLS+WerK3iVLjvXexkVaVa8Zbw+C82LdbKCxEHfyM1RHE0O/NYYArIAjhoNizZXLb12s8dLVa9OtaUZYP6b+rVt4hvt4qStELtVRcQebvyL3b3Ip3CIWBqN/QD9QBKDmWem39ImmFnprJbX24g1G6ra3A7urapigHDkcrLEI0vtW1v4lSq+p4iqs0BmeBn6ocRwNQmhd1Eent7tJsdx/NmUwTi5jJ3UyiPjfLzngtqiZBBCen5bHqRSnUVonbMCaaLhpdTQilcVGdMZ7BNXmIoEN9ZnKLNxP24BZevyvfiWlRhZuJoQ/HtgsvCz3/FKXgcG0iKM2KOvJghJcZL8oFIFPc/gBGX0zff0wuUn+NqiCiHg99d8q2PaJrth/6TvUEokqrM8WDdulaJ6IM9GVyBZ/MBOXc6BsMulF4AlGbycWIKOHRUEQUcygiijkUEcUciohiDkVEMYciophDEVHMoYgo5lBEFHMoIoo5FBHFHEomSh5k40ftg2zyaCgv0EXto6ES3hFRexGAP6Fk+LjHm0ZSAAAAAElFTkSuQmCC" InformativeScreenshot="d34da8bf99f2c1a2c44df298d627467e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Associate Application Developer - RPA (Robotic Process Automation) - Bengaluru/Bangalore - Herman Miller - 2 to 4 years of experience' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
                   </Sequence>
                 </ActivityAction>
               </uix:NForEachUiElement.Body>
