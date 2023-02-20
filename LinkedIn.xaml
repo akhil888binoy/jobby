@@ -178,9 +178,9 @@
                 </ActivityFunc>
               </ui:GetOCRText.OCREngine>
               <ui:GetOCRText.Target>
-                <ui:Target Element="{x:Null}" Id="fc8f9c39-9ee8-497c-b3a1-76d0293d12eb" InformativeScreenshot="ea1b30609d310b89054f74a5895faa26" Selector="&lt;uia automationid='D2DImageControl' role='customised' /&gt;">
+                <ui:Target Element="{x:Null}" Id="fc8f9c39-9ee8-497c-b3a1-76d0293d12eb" InformativeScreenshot="fddf134c3eff99b19ddf414cbfe3b10f" Selector="&lt;wnd cls='MUSHYBARVIEW' /&gt;&lt;ctrl name='Document' role='document' /&gt;">
                   <ui:Target.ClippingRegion>
-                    <ui:Region Rectangle="211, 87, 73, 24" />
+                    <ui:Region Rectangle="567, 160, 107, 28" />
                   </ui:Target.ClippingRegion>
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
@@ -194,7 +194,7 @@
                 <OutArgument x:TypeArguments="x:String">[Number]</OutArgument>
               </ui:GetOCRText.Text>
             </ui:GetOCRText>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Number]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Number]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
