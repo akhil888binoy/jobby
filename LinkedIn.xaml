@@ -155,7 +155,7 @@
                 <OutArgument x:TypeArguments="x:String">[State]</OutArgument>
               </ui:GetOCRText.Text>
             </ui:GetOCRText>
-            <ui:LogMessage Message="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" />
+            <ui:LogMessage Message="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
