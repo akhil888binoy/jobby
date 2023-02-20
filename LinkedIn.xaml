@@ -183,7 +183,7 @@
                 <OutArgument x:TypeArguments="x:String">[Number]</OutArgument>
               </ui:GetOCRText.Text>
             </ui:GetOCRText>
-            <ui:LogMessage Message="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Number]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
