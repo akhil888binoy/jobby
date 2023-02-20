@@ -114,7 +114,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="E:\RPA_workspace\Akhil's Resume.pdf" sap:VirtualizedContainerService.HintSize="560,88" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
-    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="560,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Version="V3" />
+    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="560,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)][k(add)][u(ctrl)][u(hk)]" Version="V3" />
     <ui:GetOCRText Text="{x:Null}" WordsInfo="{x:Null}" DisplayName="Get OCR Text 'AVL_AVView'" sap:VirtualizedContainerService.HintSize="560,172" sap2010:WorkflowViewState.IdRef="GetOCRText_1">
       <ui:GetOCRText.OCREngine>
         <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
