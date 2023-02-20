@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1760,637</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1662,637</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -66,7 +66,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1770,572" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1672,572" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="LOC" />
     </Sequence.Variables>
@@ -75,7 +75,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Parallel sap:VirtualizedContainerService.HintSize="1708,461" sap2010:WorkflowViewState.IdRef="Parallel_1">
+    <Parallel sap:VirtualizedContainerService.HintSize="1610,461" sap2010:WorkflowViewState.IdRef="Parallel_1">
       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="498,414" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="462,335" sap2010:WorkflowViewState.IdRef="Sequence_5">
@@ -122,29 +122,18 @@
           </Sequence>
         </ui:CommentOut.Body>
       </ui:CommentOut>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="498,414" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="462,335" sap2010:WorkflowViewState.IdRef="Sequence_6">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Naukri" sap:VirtualizedContainerService.HintSize="400,224" sap2010:WorkflowViewState.IdRef="Sequence_4">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Naukri.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Naukri.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="Location" />
-                </ui:InvokeWorkflowFile.Arguments>
-              </ui:InvokeWorkflowFile>
-            </Sequence>
-          </Sequence>
-        </ui:CommentOut.Body>
-      </ui:CommentOut>
+      <Sequence DisplayName="Naukri" sap:VirtualizedContainerService.HintSize="400,414" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Naukri.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Naukri.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="Location" />
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+      </Sequence>
     </Parallel>
   </Sequence>
 </Activity>
