@@ -141,7 +141,7 @@
                 </Sequence>
               </ui:CommentOut.Body>
             </ui:CommentOut>
-            <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'AVL_AVView'" sap:VirtualizedContainerService.HintSize="436,172" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
+            <ui:GetOCRText WordsInfo="{x:Null}" ContinueOnError="True" DisplayName="Get OCR Text 'AVL_AVView'" sap:VirtualizedContainerService.HintSize="436,172" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
               <ui:GetOCRText.OCREngine>
                 <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
                   <ActivityFunc.Argument>
