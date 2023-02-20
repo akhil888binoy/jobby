@@ -139,9 +139,9 @@
                 </ActivityFunc>
               </ui:GetOCRText.OCREngine>
               <ui:GetOCRText.Target>
-                <ui:Target Element="{x:Null}" Id="4de1dcb6-8de2-4df9-a39f-a3d747a18d2c" InformativeScreenshot="0b6ce77111ecfa2414aaf175aa2ba636" Selector="&lt;wnd cls='AVL_AVView' idx='2' title='AVSplitterView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrollView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
+                <ui:Target Element="{x:Null}" Id="4de1dcb6-8de2-4df9-a39f-a3d747a18d2c" InformativeScreenshot="0969922a5570719266c73cd640671ceb" Selector="&lt;wnd cls='AVL_AVView' idx='2' title='AVSplitterView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrollView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
                   <ui:Target.ClippingRegion>
-                    <ui:Region Rectangle="568, 102, 34, 24" />
+                    <ui:Region Rectangle="568, 117, 69, 24" />
                   </ui:Target.ClippingRegion>
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
