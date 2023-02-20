@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Indeed" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,1301" sap2010:WorkflowViewState.IdRef="Indeed_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Indeed" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,1392" sap2010:WorkflowViewState.IdRef="Indeed_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="46">
       <x:String>System.Activities</x:String>
@@ -91,7 +91,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Indeed" sap:VirtualizedContainerService.HintSize="622,1236" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Indeed" sap:VirtualizedContainerService.HintSize="622,1327" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="JobTitle" />
     </Sequence.Variables>
@@ -100,13 +100,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Job Search India | Indeed" sap:VirtualizedContainerService.HintSize="560,1125" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4f7f6617-2878-4b4e-8f0f-81909e6f775f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Job Search India | Indeed" sap:VirtualizedContainerService.HintSize="560,1216" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4f7f6617-2878-4b4e-8f0f-81909e6f775f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,908" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,999" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +134,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NForEachUiElement ExtractDataSettings="{x:Null}" ExtractMetadata="{x:Null}" MaximumResults="{x:Null}" DisplayName="For Each UI Element" sap:VirtualizedContainerService.HintSize="464,279" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="Rows" Version="V3">
+            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentElement'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="464,370" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="4f7f6617-2878-4b4e-8f0f-81909e6f775f" Version="V3">
               <uix:NForEachUiElement.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
@@ -149,11 +149,21 @@
                   </Sequence>
                 </ActivityAction>
               </uix:NForEachUiElement.Body>
+              <uix:NForEachUiElement.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://in.indeed.com/jobs?q=RPA+Developer&amp;l=India&amp;from=searchOnHP&amp;vjk=600c583d6ddfa241" DesignTimeRectangle="531, 418, 44, 44" DesignTimeScaleFactor="1" FriendlyName="'A /jobs?q=RPA+Developer…'" FullSelectorArgument="&lt;webctrl aria-label='Next Page' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Next Page' tag='A' type='' class='css-13p07ha e8ju0x50' aaname='' /&gt;" Guid="294b5229-f958-424a-a011-ed522f9c791c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFCSURBVGhD7ZlBbsIwEEV7oRy57ZZyFETPQEuCUkG7LyvTX/NDkg4VC08mg+ZJfwPY+Y/YKMIPyTn3K3A8fqevz0Nqmzo12zeT4NrogC7XEAUwaFdvzxNtBpNOm3xtdEEniT8C+4/2Z8D7aCL7oBO6jRkI5G9+fuUZdBvfiU4A6+yybOYbdOzviU4AZtKAOaZ/FzqB/GtjuWFvzea3K+kE5A/PNyQErEJCwCokBKxCQkDK63olvl4ypLjA8mWRqqpKz0+P4vulQooLoDgEtCWIyhKaQoKobWJtCaImgGhKEFUBREuChMB/0SqPkNjEUrTLI6S4wBTlEVJcwP2jBOL6YW6qkBCwCgkBq5AQsAq5HwH3f6+7P+Bwf8QEYOb2kI+4PmYl+U44PegmWGcYlH+dpMn1g2ujQ3/Nj7kq4AXnAimdADKjHEYg3yf6AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='728 Rpa Developer Jobs and Vacancies in India - 20 February 2023 | Indeed.com' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NForEachUiElement.NextLink>
+              <uix:NForEachUiElement.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="171, 133, 470, 3139" DesignTimeScaleFactor="1" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='mosaic-provider-jobcards' tag='UL' /&gt;" Guid="015f4d31-e98e-4922-9ec4-5a07bf0d26e3" InformativeScreenshot="1ea1d2a212284d020236494519651cda.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='728 Rpa Developer Jobs and Vacancies in India - 20 February 2023 | Indeed.com' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NForEachUiElement.Target>
               <uix:NForEachUiElement.Variables>
-                <sco:Collection x:TypeArguments="Variable" />
+                <Variable x:TypeArguments="ui:UiElement" Name="CurrentElement" />
+                <Variable x:TypeArguments="x:String" Name="CurrentElement_Label" />
               </uix:NForEachUiElement.Variables>
               <uix:NForEachUiElement.VariablesMetadata>
-                <scg:Dictionary x:TypeArguments="x:String, scg:List(uuam:VariableMetadata)" />
+                <scg:List x:TypeArguments="uuam:VariableMetadata" x:Key="Column0" Capacity="4">
+                  <uuam:VariableMetadata Name="CurrentElement" Type="ui:UiElement" />
+                  <uuam:VariableMetadata Name="CurrentElement_Label" Type="x:String" />
+                </scg:List>
               </uix:NForEachUiElement.VariablesMetadata>
             </uix:NForEachUiElement>
           </Sequence>
