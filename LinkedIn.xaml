@@ -167,9 +167,9 @@
                 </ActivityFunc>
               </ui:GetOCRText.OCREngine>
               <ui:GetOCRText.Target>
-                <ui:Target Element="{x:Null}" Id="fc8f9c39-9ee8-497c-b3a1-76d0293d12eb" InformativeScreenshot="00dd4bbf40106887b5bf281af127ecd5" Selector="&lt;wnd cls='AVL_AVView' idx='2' title='AVSplitterView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrollView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;">
+                <ui:Target Element="{x:Null}" Id="fc8f9c39-9ee8-497c-b3a1-76d0293d12eb" InformativeScreenshot="ea1b30609d310b89054f74a5895faa26" Selector="&lt;uia automationid='D2DImageControl' role='customised' /&gt;">
                   <ui:Target.ClippingRegion>
-                    <ui:Region Rectangle="416, 64, 128, 29" />
+                    <ui:Region Rectangle="211, 87, 73, 24" />
                   </ui:Target.ClippingRegion>
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
