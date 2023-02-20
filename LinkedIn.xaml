@@ -131,7 +131,7 @@
         </ActivityFunc>
       </ui:ReadPDFWithOCR.OCREngine>
     </ui:ReadPDFWithOCR>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="658,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[Read]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="658,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[ReadOCR]" />
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="658,1503" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,1424" sap2010:WorkflowViewState.IdRef="Sequence_8">
